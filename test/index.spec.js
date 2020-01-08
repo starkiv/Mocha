@@ -1,5 +1,5 @@
 const assert = require('assert');
-const {isAdult, sortArrayUp, isPalindrome} = require('../index');
+const {isAdult, sortArrayUp, isPalindrome, OddNumber, EvenNumber} = require('../index');
 
 
 describe('function isAdult', () => {
@@ -53,6 +53,50 @@ describe('function isPalindrome', () => {
 
     it('should function works correct', () => {
         assert.equal(isPalindrome('Anna'), true)
+    })
+})
+
+describe('function OddNumber', () => {
+    it('should function OddNumber return odd number', () => {
+        assert.equal(OddNumber(9), true)
+    })
+
+    it('should function OddNumber return odd number', () => {
+        assert.equal(OddNumber('9'), undefined)
+    })
+
+    it('should function OddNumber return odd number', () => {
+        assert.equal(OddNumber(8), false)
+    })
+
+    it('should function OddNumber return odd number', () => {
+        assert.equal(OddNumber(65), true)
+    })
+
+    it('should function OddNumber return odd number', () => {
+        assert.equal(OddNumber(56), false)
+    })
+})
+
+describe('function EvenNumber', () => {
+    it('should function EvenNumber return even number', () => {
+        assert.equal(EvenNumber(6), true)
+    })
+
+    it('should function EvenNumber return even number', () => {
+        assert.equal(EvenNumber('seven'), undefined)
+    })
+
+    it('should function EvenNumber return even number', () => {
+        assert.equal(EvenNumber(13), false)
+    })
+
+    it('should function EvenNumber return even number', () => {
+        assert.equal(EvenNumber(894), true)
+    })
+
+    it('should function EvenNumber return even number', () => {
+        assert.equal(EvenNumber(999), false)
     })
 })
 
