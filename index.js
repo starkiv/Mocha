@@ -4,15 +4,16 @@ function isAdult(age) {
     } else {
         if (age >= 21) return true
     }
-        if (age < 0) return undefined
+    if (age < 0) return undefined
 }
 
-function sortArrayUp(arr) {
+function sortArrayUp(arr = []) {
     arr.sort((a, b) => a - b)
     return arr
 }
 
 function isPalindrome(name) {
+    if (typeof name !== 'string') return undefined
     let str = '';
     for (let i = name.length - 1; i >= 0; i--) {
         str += name[i];
@@ -22,8 +23,9 @@ function isPalindrome(name) {
 }
 
 function OddNumber(number) {
-    if (typeof (number) !== 'number') return undefined
-    else if (number % 2 === 1) return true
+    if (typeof (number) !== 'number') {
+        return undefined
+    } else if (number % 2 === 1) return true
     else return false
 }
 
