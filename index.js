@@ -4,6 +4,7 @@ function isAdult(age) {
     } else {
         if (age >= 21) return true
     }
+        if (age < 0) return undefined
 }
 
 function sortArrayUp(arr) {

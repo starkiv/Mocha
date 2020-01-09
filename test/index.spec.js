@@ -20,7 +20,7 @@ describe('function isAdult', () => {
     })
 
     it('should function isAdult works correct', () => {
-        assert.equal(isAdult(91), true)
+        assert.equal(isAdult(-5), undefined)
     })
 })
 
