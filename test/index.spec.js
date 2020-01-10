@@ -1,7 +1,7 @@
 const assert = require('assert');
 const {expect} = require('chai');
 
-const {isAdult, sortArrayUp, isPalindrome, OddNumber, EvenNumber} = require('../index');
+const {isAdult, sortArrayUp, isPalindrome, OddNumber, EvenNumber, arithmetic, numberReversal, changeDotsToSpace, withoutCoins, isItem} = require('../index');
 
 
 describe('function isAdult', () => {
@@ -109,3 +109,105 @@ describe('function EvenNumber', () => {
     })
 })
 
+describe('function arithmetic', () => {
+    it('should function arithmetic add values', () => {
+        expect(arithmetic(7, 3, 'add')).eq(10)
+    })
+
+    it('should function arithmetic add values', () => {
+        expect(arithmetic(5, 9, 'sub')).eq(undefined)
+    })
+
+    it('should function arithmetic add values', () => {
+        expect(arithmetic(19, 4, 'subtract')).eq(15)
+    })
+
+    it('should function arithmetic add values', () => {
+        expect(arithmetic(-2, 2, 'multiply')).eq(-4)
+    })
+
+    it('should function arithmetic add values', () => {
+        expect(arithmetic(8, 0, 'divide')).eq(Infinity)
+    })
+
+    it('should function arithmetic add values', () => {
+        expect(arithmetic(8, 2, 'divide')).eq(4)
+    })
+})
+
+describe('function numberReversal', () => {
+    it('should function sort and reversal numbers', () => {
+        expect(numberReversal(432536)).eq(654332)
+    })
+
+    it('should function sort and reversal numbers', () => {
+        expect(numberReversal('234675')).undefined
+    })
+
+    it('should function sort and reversal numbers', () => {
+        expect(numberReversal(-435693)).undefined
+    })
+
+    it('should function arithmetic add values', () => {
+        expect(numberReversal(NaN)).eq(NaN)
+    })
+
+    it('should function arithmetic add values', () => {
+        expect(numberReversal(54321)).eq(12345)
+    })
+})
+
+describe('function changeDotsOnSpace', () => {
+    it('should function changes dots to space', () => {
+        expect(changeDotsToSpace('I.go.to.gym')).eq('I go to gym')
+    })
+
+    it('should function work without space', () => {
+        expect(changeDotsToSpace('conversation')).eq('conversation')
+    })
+
+    it('should function changes dots to space', () => {
+        expect(changeDotsToSpace(435693)).undefined
+    })
+
+    it('should function changes dots to space', () => {
+        expect(changeDotsToSpace('djgj?">{}...udsf@£$/.238.9]')).eq('djgj?">{}   udsf@£$/ 238 9]')
+    })
+})
+
+describe('function withoutCoins', () => {
+    it('should function return integer number', () => {
+        expect(withoutCoins(32.45)).eq(32)
+    })
+
+    it('should function return correct answer if we put string with numbers', () => {
+        expect(withoutCoins('5.50')).eq(5)
+    })
+    it('should function return correct answer if we put string without numbers', () => {
+        expect(withoutCoins('fdheef')).NaN
+    })
+    it('should function return integer number with argument mark', () => {
+        expect(withoutCoins(-56.65)).eq(-56)
+    })
+    it('should function return integer number', () => {
+        expect(withoutCoins('10.3' / 2)).eq(5)
+    })
+})
+
+describe('function isItem', () => {
+    it('should function if the item belongs to the list', () => {
+        expect(isItem([3, 4, 5, 8, 3, 5], 8)).true
+    })
+
+    it('should function if the item belongs to the list', () => {
+        expect(isItem(['one', 'two', 'six', 'nine'], 'ten')).false
+    })
+
+    it('should function if the item belongs to the list', () => {
+        expect(isItem([],)).false
+    })
+
+    it('should function if the item belongs to the list', () => {
+        expect(isItem([1], 1)).true
+    })
+})

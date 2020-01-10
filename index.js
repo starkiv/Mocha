@@ -35,4 +35,45 @@ function EvenNumber(number) {
     else return false
 }
 
-module.exports = {isAdult, sortArrayUp, isPalindrome, OddNumber, EvenNumber};
+function arithmetic(a, b, operator) {
+    if (operator === 'add') return a + b
+    if (operator === 'subtract') return a - b
+    if (operator === 'multiply') return a * b
+    if (operator === 'divide') return a / b
+}
+
+function numberReversal(n) {
+    if ((typeof n !== 'number') || (n < 0)) return undefined
+    let s = n + '';
+    let a = s.split('').sort((a, b) => b - a).join('')
+    return +a
+}
+
+function changeDotsToSpace(str) {
+    if (typeof str !== 'string') return undefined
+    return str.replace(/[.]/g, ' ');
+}
+
+function withoutCoins(dollars) {
+    return Math.trunc(dollars)
+}
+
+function isItem(arr, element) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === element) return true
+    }
+    return false
+}
+
+module.exports = {
+    isAdult,
+    sortArrayUp,
+    isPalindrome,
+    OddNumber,
+    EvenNumber,
+    arithmetic,
+    numberReversal,
+    changeDotsToSpace,
+    withoutCoins,
+    isItem
+};
