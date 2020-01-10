@@ -1,8 +1,8 @@
-#🖥️Unit / testing / Javascript / mocha / chai 🖥️
+# 🖥️Unit / testing / Javascript / mocha / chai  🖥️
 📖This code about JavaScript Unit test with Mocha and Chai.
 If you want to install this code, you must follow the instructions.
 ***
-###📋 Instruction:
+### 📋 Instruction:
 * To get started install Nodejs 👉🏼 https://nodejs.org/
 * Install Mocha by running the command in WebStorm's terminal npm install --global mocha
 * Clone this Project.
