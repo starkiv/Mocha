@@ -148,11 +148,11 @@ describe('function numberReversal', () => {
   });
 
   it('should function arithmetic add values', () => {
-    expect(numberReversal(NaN)).eq(NaN);
+    expect(numberReversal(NaN)).NaN;
   });
 
   it('should function arithmetic add values', () => {
-    expect(numberReversal(54321)).eq(12345);
+    expect(numberReversal(53241)).eq(54321);
   });
 });
 

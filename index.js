@@ -30,6 +30,7 @@ function OddNumber(number) {
   } else return number % 2 === 1;
 }
 
+
 /**
  * @return {boolean}
  */
